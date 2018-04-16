@@ -9,7 +9,7 @@
 
 <xacro:macro name="group_right_gripper_ee">
   <group name="right_gripper">
-      <link name="wrist" />
+      <link name="wrist_pitch" />
       <link name="gripper_Link" />
   </group>
 </xacro:macro>
@@ -30,9 +30,9 @@
   <disable_collisions link1="right_hand" link2="gripper_Link" reason="Never" /> -->
   <disable_collisions link1="gripper_Link" link2="lowerarm" reason="Never" />
   <disable_collisions link1="gripper_Link" link2="lowerarm_preroll" reason="Never" />
-  <disable_collisions link1="gripper_Link" link2="wrist" reason="Adjacent" />
+  <disable_collisions link1="gripper_Link" link2="wrist_pitch" reason="Adjacent" />
   <disable_collisions link1="lowerarm" link2="lowerarm_preroll" reason="Adjacent" />
   <disable_collisions link1="lowerarm" link2="wrist" reason="Adjacent" />
-  <disable_collisions link1="lowerarm_preroll" link2="wrist" reason="Never" />
+  <disable_collisions link1="lowerarm_preroll" link2="wrist_pitch" reason="Never" />
 </xacro:macro>
 </robot>
