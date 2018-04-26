@@ -54,7 +54,7 @@
     <child
       link="lowerarm_preroll" />
     <axis
-      xyz="0 -1 0" />
+      xyz="0 0 1" />
     <!-- <limit
       lower="-1.5708"
       upper="1.5708"
@@ -117,7 +117,7 @@
     <child
       link="lowerarm" />
     <axis
-      xyz="1 0 0" />
+      xyz="0 0 -1" />
     <!-- <limit
       lower="-1.5708"
       upper="1.5708"
@@ -180,7 +180,7 @@
     <child
       link="wrist" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 0 1" />
       <!-- <limit
         lower="-1.5708"
         upper="1.5708"
