@@ -47,8 +47,8 @@
     name="elbow"
     type="revolute">
     <origin
-      xyz="0 0 -0.1898"
-      rpy="0 0 0" />
+      xyz="0.008 -0.019 0.1896"
+      rpy="-1.57 0 3.14" />
     <parent
       link="upperarm" />
     <child
@@ -110,8 +110,8 @@
     name="forearm_roll"
     type="revolute">
     <origin
-      xyz="0.0795 0.00025 -0.025"
-      rpy="0 0 0" />
+      xyz=" 0.08087 -0.026 -0.02075"
+      rpy="0 -1.57 -3.14" />
     <parent
       link="lowerarm_preroll" />
     <child
@@ -173,8 +173,8 @@
     name="wrist_pitch"
     type="revolute">
     <origin
-      xyz="0.084137 0 0.009003"
-      rpy="0 0 0" />
+      xyz="0.0191 -0.005 0.148"
+      rpy="0 -1.57 3.14" />
     <parent
       link="lowerarm" />
     <child
@@ -190,7 +190,7 @@
   </joint>
 
   <!-- gripper_Link -->
-  <link
+  <!-- <link
     name="gripper_Link">
     <inertial>
       <origin
@@ -210,6 +210,10 @@
       <origin
         xyz="0 0 0"
         rpy="0 0 0" />
+        <geometry>
+          <mesh
+            filename="package://gummi_base_template/meshes/gripper_Link.stl" />
+        </geometry>
       <material
         name="">
         <color
@@ -225,10 +229,10 @@
           filename="package://gummi_base_template/meshes/gripper_Link.stl" />
       </geometry>
     </collision>
-  </link>
+  </link> -->
 
   <!-- gripper -->
-  <joint
+  <!-- <joint
     name="gripper"
     type="revolute">
     <origin
@@ -239,12 +243,12 @@
     <child
       link="gripper_Link" />
     <axis
-      xyz="0 1 0" />
+      xyz="0 1 0" /> -->
     <!-- <limit
       lower="-1.5708"
       upper="1.5708"
       effort="0"
       velocity="0" /> -->
-    <limit effort="0" lower="-0.30" upper="0.17" velocity="1.0"/>
-  </joint>
+    <!-- <limit effort="0" lower="-0.30" upper="0.17" velocity="1.0"/> -->
+  <!-- </joint> -->
 </robot>

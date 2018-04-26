@@ -10,7 +10,7 @@
 <xacro:macro name="group_right_gripper_ee">
   <group name="right_gripper">
       <link name="wrist_pitch" />
-      <link name="gripper_Link" />
+      <!-- <link name="gripper_Link" /> -->
   </group>
 </xacro:macro>
 
@@ -20,17 +20,17 @@
   <joint name="wrist_pitch" value="0" />
 </xacro:macro>
 
-<xacro:macro name="end_effector_ee">
+<!-- <xacro:macro name="end_effector_ee"> -->
   <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-  <end_effector name="right_eef" parent_link="wrist" group="right_gripper" />
-</xacro:macro>
+  <!-- <end_effector name="right_eef" parent_link="wrist" group="right_gripper" />
+</xacro:macro> -->
 
 <xacro:macro name="disable_collisions_ee">
   <!-- <disable_collisions link1="right_hand" link2="wrist" reason="Never" />
   <disable_collisions link1="right_hand" link2="gripper_Link" reason="Never" /> -->
-  <disable_collisions link1="gripper_Link" link2="lowerarm" reason="Never" />
+  <!-- <disable_collisions link1="gripper_Link" link2="lowerarm" reason="Never" />
   <disable_collisions link1="gripper_Link" link2="lowerarm_preroll" reason="Never" />
-  <disable_collisions link1="gripper_Link" link2="wrist_pitch" reason="Adjacent" />
+  <disable_collisions link1="gripper_Link" link2="wrist_pitch" reason="Adjacent" /> -->
   <disable_collisions link1="lowerarm" link2="lowerarm_preroll" reason="Adjacent" />
   <disable_collisions link1="lowerarm" link2="wrist" reason="Adjacent" />
   <disable_collisions link1="lowerarm_preroll" link2="wrist_pitch" reason="Never" />
