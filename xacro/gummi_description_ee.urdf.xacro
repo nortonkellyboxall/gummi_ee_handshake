@@ -190,7 +190,7 @@
   </joint>
 
   <!-- gripper_Link -->
-  <!-- <link
+  <link
     name="gripper_Link">
     <inertial>
       <origin
@@ -229,26 +229,26 @@
           filename="package://gummi_base_template/meshes/gripper_Link.stl" />
       </geometry>
     </collision>
-  </link> -->
+  </link>
 
   <!-- gripper -->
-  <!-- <joint
+  <joint
     name="gripper"
     type="revolute">
     <origin
-      xyz="0.066697 -0.0261 0.0093282"
-      rpy="1.5708 1.0472 3.1416" />
+      xyz="0.028 0 -0.02075"
+      rpy="0 -1.57 3.14" />
     <parent
       link="wrist" />
     <child
       link="gripper_Link" />
     <axis
-      xyz="0 1 0" /> -->
+      xyz="0 0 1" />
     <!-- <limit
       lower="-1.5708"
       upper="1.5708"
       effort="0"
       velocity="0" /> -->
-    <!-- <limit effort="0" lower="-0.30" upper="0.17" velocity="1.0"/> -->
-  <!-- </joint> -->
+    <limit effort="0" lower="-0.30" upper="0.17" velocity="1.0"/>
+  </joint>
 </robot>
