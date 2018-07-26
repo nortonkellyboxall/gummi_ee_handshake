@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/lowerarm_preroll_d.STL" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j5_Link.stl" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/lowerarm_preroll_d.STL" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j5_Link.stl" />
       </geometry>
     </collision>
   </link>
@@ -75,7 +75,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/lowerarm.STL" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j6_link.stl" />
       </geometry>
       <material
         name="">
@@ -89,7 +89,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/lowerarm.STL" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j6_link.stl" />
       </geometry>
     </collision>
   </link>
@@ -131,7 +131,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/wrist.STL" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j7_Link.stl" />
       </geometry>
       <material
         name="">
@@ -145,7 +145,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/wrist.STL" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j7_Link.stl" />
       </geometry>
     </collision>
   </link>
