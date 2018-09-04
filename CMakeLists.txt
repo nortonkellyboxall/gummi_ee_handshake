@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(gummi_ee_handshake)
+project(gummi_ee_luffy)
 
 ## Add support for C++11, supported in ROS Kinetic and newer
 # add_definitions(-std=c++11)
