@@ -44,8 +44,8 @@
     name="fastswitch"
     type="fixed">
     <origin
-      xyz="0.00037 0.102 -0.02055"
-      rpy="1.57 -1.57 0" />
+      xyz="0.00037 0.10187 -0.021"
+      rpy="1.57079632679 -1.57079632679 0" />
     <parent
       link="lowerarm_preroll_u" />
     <child
@@ -97,14 +97,14 @@
     name="forearm_roll"
     type="continuous">
     <origin
-      xyz="0 0 0.04"
-      rpy="0 0 3.16" />
+      xyz="0 0 0.03987"
+      rpy="0 0 3.14159265359" />
     <parent
       link="lowerarm_preroll_d" />
     <child
       link="lowerarm" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       effort="0"
       velocity="1" />
@@ -153,8 +153,8 @@
     name="wrist_pitch"
     type="revolute">
     <origin
-      xyz="0.0192 0 -0.16357"
-      rpy="0 1.57 0" />
+      xyz="0.019 0 -0.16357"
+      rpy="0 1.57079632679 0" />
     <parent
       link="lowerarm" />
     <child
@@ -166,6 +166,59 @@
       upper="1"
       effort="0"
       velocity="0" />
+  </joint>
+    <link
+    name="pointer">
+    <inertial>
+      <origin
+        xyz="0.0484512742480244 0.0139768664666073 0.000956995637939325"
+        rpy="0 0 0" />
+      <mass
+        value="0.0644774651698934" />
+      <inertia
+        ixx="8.67406414845019E-06"
+        ixy="-1.3193756197629E-05"
+        ixz="-3.41916035169704E-06"
+        iyy="4.217442276821E-05"
+        iyz="-4.04257224014858E-07"
+        izz="4.91399139463636E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper_CH.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="end_effector"
+    type="fixed">
+    <origin
+      xyz="0.0966 0 -0.0202"
+      rpy="0 1.57079632679 0" />
+    <parent
+      link="wrist" />
+    <child
+      link="pointer" />
+    <axis
+      xyz="0 0 0" />
   </joint>
   <!--
   making sure I can move my fingers in a synchronized way. also if they move at

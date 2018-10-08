@@ -6,11 +6,14 @@
     <joint name="wrist_pitch" />
 </xacro:macro>
 
+<xacro:macro name="group_pointer">
+    <joint name="end_effector" />
+</xacro:macro>
+
 <xacro:macro name="group_state_right_arm_ee">
   <joint name="forearm_roll" value="0" />
   <joint name="wrist_pitch" value="0" />
 </xacro:macro>
-
 
 <xacro:macro name="disable_collisions_ee">
   <disable_collisions link1="lowerarm" link2="lowerarm_preroll_d" reason="Adjacent" />
