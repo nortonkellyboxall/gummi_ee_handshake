@@ -18,3 +18,4 @@ gains:
     P: 0.055
     I: 0.0005
     D: 0.2
+restingPoseAngle: 0.0
