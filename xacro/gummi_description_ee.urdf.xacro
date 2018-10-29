@@ -189,7 +189,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper.stl" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper_EIH.stl" />
       </geometry>
       <material
         name="">
@@ -203,7 +203,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper_CH.stl" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper_EIH_CH.stl" />
       </geometry>
     </collision>
   </link>
@@ -212,7 +212,7 @@
     type="fixed">
     <origin
       xyz="0.0966 0 -0.0202"
-      rpy="0 1.57079632679 0" />
+      rpy="0 -1.57079632679 3.14159265359" />
     <parent
       link="wrist" />
     <child
