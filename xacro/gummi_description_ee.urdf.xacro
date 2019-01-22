@@ -220,6 +220,9 @@
     <axis
       xyz="0 0 0" />
   </joint>
+
+
+  
   <!--
   making sure I can move my fingers in a synchronized way. also if they move at
   different rates, set the mimic tag to something different. it allows for an
