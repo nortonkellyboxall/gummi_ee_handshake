@@ -11,12 +11,12 @@
 Gummi_ee_luffy is the end effector package for the gummi arm, everything for this part of the robot is configured in this package however, everything is launched and run from either the gummi_base_luffy package or the gummi_interface package. Below are links to all the packages involved in running the Luffy version of the Gummi Arm.
 
 The packages are as follows:
-- gummi_base_luffy      [link to repo](https://github.com/nortonkellyboxall/gummi_base_luffy)
-- gummi_ee_luffy        [link to repo](https://github.com/nortonkellyboxall/gummi_ee_luffy)
-- gummi_head_twodof     [link to repo](https://github.com/nortonkellyboxall/gummi_head_twodof)
-- gummi_interface       [link to repo](https://github.com/nortonkellyboxall/gummi_interface)
-- gummi_moveit          [link to repo](https://github.com/nortonkellyboxall/gummi_moveit)
-- gummi_hardware_Luffy  [link to repo](https://github.com/nortonkellyboxall/gummi_hardware_Luffy)
+- [gummi_base_luffy](https://nortonkellyboxall.github.io/gummi_base_luffy/)
+- [gummi_ee_luffy](https://nortonkellyboxall.github.io/gummi_ee_luffy/)
+- [gummi_head_twodof](https://nortonkellyboxall.github.io/gummi_head_twodof/)
+- [gummi_interface](https://nortonkellyboxall.github.io/gummi_interface/)
+- [gummi_moveit](https://github.com/nortonkellyboxall/gummi_moveit)
+- [gummi_hardware_luffy](https://nortonkellyboxall.github.io/gummi_hardware_luffy/)
 
 Each of these packages are connected and required to be cloned or forked.
 
