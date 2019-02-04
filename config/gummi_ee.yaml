@@ -1,16 +1,27 @@
+teleop: 0
+velocity_control: 0
+
+# Here we use the JOINT names instead of the
+# motor controller names from gummi_dynamixel.
+
 joints:
+  elbow:
+    effort: 0.75
+    gradual_startup_position: -0.6
+    gradual_startup_time: 1.0
+    antagonist: True
   forearm_roll:
     effort: 1.0
     gradual_startup_position: 0
     gradual_startup_time: 1.0
     antagonist: False
   wrist_pitch:
-    effort: 1.0
+    effort: 0.75
     gradual_startup_position: 0
     gradual_startup_time: 1.0
     antagonist: True
   # gripper:
-  #   effort: 1.0
+  #   effort: 1
   #   gradual_startup_position: 0
   #   gradual_startup_time: 1.0
   #   antagonist: False
