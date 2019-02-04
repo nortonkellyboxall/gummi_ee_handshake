@@ -22,7 +22,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j5_Link.stl" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/lowerarm_preroll_d.stl" />
       </geometry>
       <material
         name="">
@@ -36,7 +36,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j5_Link.stl" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/lowerarm_preroll_d_CH.stl" />
       </geometry>
     </collision>
   </link>
@@ -44,8 +44,8 @@
     name="fastswitch"
     type="fixed">
     <origin
-      xyz="0.008 -0.019 0.1896"
-      rpy="-1.57 0 3.14" />
+      xyz="0.00037 0.10187 -0.021"
+      rpy="1.57079632679 -1.57079632679 0" />
     <parent
       link="lowerarm_preroll_u" />
     <child
@@ -95,7 +95,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j6_link.stl" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j6_link_CH.stl" />
       </geometry>
     </collision>
   </link>
@@ -103,17 +103,15 @@
     name="forearm_roll"
     type="continuous">
     <origin
-      xyz=" 0.08087 -0.026 -0.02075"
-      rpy="0 -1.57 -3.14" />
+      xyz="0 0 0.03987"
+      rpy="0 0 3.14159265359" />
     <parent
       link="lowerarm_preroll_d" />
     <child
       link="lowerarm" />
     <axis
       xyz="0 0 -1" />
-    <!-- <limit
-      lower="-1.5708"
-      upper="1.5708"
+    <limit
       effort="0"
       velocity="1" />
   </joint>
@@ -153,7 +151,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j7_Link.stl" />
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/j7_Link_CH.stl" />
       </geometry>
     </collision>
   </link>
@@ -161,27 +159,82 @@
     name="wrist_pitch"
     type="revolute">
     <origin
-      xyz="0.0191 -0.005 0.148"
-      rpy="0 -1.57 3.14" />
+      xyz="0.019 0 -0.16357"
+      rpy="0 1.57079632679 0" />
     <parent
       link="lowerarm" />
     <child
       link="wrist" />
     <axis
-      xyz="0 0 1" />
-      <!-- <limit
-        lower="-1.5708"
-        upper="1.5708"
-        effort="0"
-        velocity="0" /> -->
-      <limit effort="0" lower="-1.5" upper="1.68" velocity="1.0"/>
+      xyz="0 0 -1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
   </joint>
+    <link
+    name="pointer">
+    <inertial>
+      <origin
+        xyz="0.0484512742480244 0.0139768664666073 0.000956995637939325"
+        rpy="0 0 0" />
+      <mass
+        value="0.0644774651698934" />
+      <inertia
+        ixx="8.67406414845019E-06"
+        ixy="-1.3193756197629E-05"
+        ixz="-3.41916035169704E-06"
+        iyy="4.217442276821E-05"
+        iyz="-4.04257224014858E-07"
+        izz="4.91399139463636E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper_EIH.stl" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://gummi_ee_$(env ROS_GUMMI_EE)/meshes/pointer_gripper_EIH_CH.stl" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="end_effector"
+    type="fixed">
+    <origin
+      xyz="0.0966 0 -0.0202"
+      rpy="0 -1.57079632679 3.14159265359" />
+    <parent
+      link="wrist" />
+    <child
+      link="pointer" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+  
   <!--
   making sure I can move my fingers in a synchronized way. also if they move at
   different rates, set the mimic tag to something different. it allows for an
   offset and a multiplication rate. check ros docs for details
   -->
-  <joint name="gripper" type="revolute">
+  <!-- <joint name="gripper" type="revolute">
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <parent link="wrist"/>
     <child link="dummygripper"/>
@@ -488,5 +541,5 @@
       velocity="0" />
     <mimic joint="gripper"/>
 
-  </joint>
+  </joint> -->
 </robot>
