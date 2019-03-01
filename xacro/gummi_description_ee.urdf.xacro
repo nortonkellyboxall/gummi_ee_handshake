@@ -51,7 +51,13 @@
     <child
       link="lowerarm_preroll_d" />
     <axis
-      xyz="0 0 0" />
+      xyz="0 0 1" />
+    <!-- <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" /> -->
+    <limit effort="0" lower="-0.85" upper="0.65" velocity="1.0"/>
   </joint>
   <link
     name="lowerarm">
